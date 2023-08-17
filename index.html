@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Segitiga</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Katik</h1>
+      <p>
+        Hai Sobat, Selamat datang di Katik :)<br />
+        Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan
+        keliling bangun datar
+      </p>
+    </header>
+    <div class="main_container">
+      <div class="buttons">
+        <button id="btn_diva">Luas Segitiga</button>
+        <button id="btn_divb">Keliling Segitiga</button>
+      </div>
+      <div class="blocks">
+        <div class="diva" id="diva">
+          <h3>Rumus Luas Segitiga</h3>
+          <div class="imga">
+            <img
+              src="./img/Luas-segitiga.png"
+              alt=""
+              class="responsive"
+              width="100"
+              height="100" />
+          </div>
+          <div class="hitunga">
+            <h3>Hitung Luas Segitiga</h3>
+            <table>
+              <tr>
+                <td><p>Alas</p></td>
+                <td><p>:</p></td>
+                <td>
+                  <input type="number" id="alas" />
+                </td>
+              </tr>
+              <tr>
+                <td><p>Tinggi</p></td>
+                <td><p>:</p></td>
+                <td>
+                  <input type="number" id="tinggi" />
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>
+                  <button onclick="luas()">Hitung</button>
+                </td>
+              </tr>
+              <tr>
+                <td><p>Luas</p></td>
+                <td><p>:</p></td>
+                <td>
+                  <input type="text" id="luas" disabled="true" />
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="divb" id="divb">
+          <h3>Rumus Keliling Segitiga</h3>
+          <div class="imga">
+            <img
+              src="./img/keliling-segitiga.png"
+              alt=""
+              class="responsive"
+              width="100"
+              height="100" />
+          </div>
+          <div class="hitungb">
+            <h3>Hitung Keliling Segitiga</h3>
+            <table>
+              <tr>
+                <td><p>Sisi A</p></td>
+                <td><p>:</p></td>
+                <td>
+                  <input type="number" id="sisia" />
+                </td>
+              </tr>
+              <tr>
+                <td><p>Sisi B</p></td>
+                <td><p>:</p></td>
+                <td>
+                  <input type="number" id="sisib" />
+                </td>
+              </tr>
+              <tr>
+                <td><p>Sisi C</p></td>
+                <td><p>:</p></td>
+                <td>
+                  <input type="number" id="sisic" />
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>
+                  <button onclick="kel()">Hitung</button>
+                </td>
+              </tr>
+              <tr>
+                <td><p>Keliling</p></td>
+                <td><p>:</p></td>
+                <td>
+                  <input type="text" id="kel" disabled="true" />
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+    <script>
+      var btn_diva = document.getElementById("btn_diva");
+      var btn_divb = document.getElementById("btn_divb");
+      var diva = document.getElementById("diva");
+      var divb = document.getElementById("divb");
+      btn_diva.addEventListener("click", () => {
+        diva.style.display = "block";
+        divb.style.display = "none";
+      });
+      btn_divb.addEventListener("click", () => {
+        diva.style.display = "none";
+        divb.style.display = "block";
+      });
+    </script>
+  </body>
+</html>
